@@ -31,8 +31,8 @@ import (
 	"log"
 	"os"
 
-	"github.com/kylelemons/goat/term"
-	"github.com/kylelemons/goat/termios"
+	"github.com/SayCV/SayCV_Go_VT/term"
+	"github.com/SayCV/SayCV_Go_VT/termios"
 )
 
 var frame = flag.Bool("frame", false, "Do a frame demo instead of line editing")
