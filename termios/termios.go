@@ -52,7 +52,7 @@ const (
 	IXOFF   inMode = C.IXOFF   // enable input flow control
 	IXANY   inMode = C.IXANY   // any char will restart after stop
 	IMAXBEL inMode = C.IMAXBEL // ring bell on input queue full
-	IUTF8   inMode = C.IUTF8   // maintain state for UTF-8 VERASE
+	//IUTF8   inMode = C.IUTF8   // maintain state for UTF-8 VERASE
 )
 
 // Output Flags
@@ -93,15 +93,15 @@ const (
 	ECHOK   locMode = C.ECHOK   // echo NL after line kill
 	ECHO    locMode = C.ECHO    // enable echoing
 	ECHONL  locMode = C.ECHONL  // echo NL even if ECHO is off
-	ECHOPRT locMode = C.ECHOPRT // visual erase mode for hardcopy
+	//ECHOPRT locMode = C.ECHOPRT // visual erase mode for hardcopy
 	ECHOCTL locMode = C.ECHOCTL // echo control chars as ^(Char)
 	ISIG    locMode = C.ISIG    // enable signals INTR, QUIT, [D]SUSP
 	ICANON  locMode = C.ICANON  // canonicalize input lines
 	IEXTEN  locMode = C.IEXTEN  // enable DISCARD and LNEXT
-	EXTPROC locMode = C.EXTPROC // external processing
+	//EXTPROC locMode = C.EXTPROC // external processing
 	TOSTOP  locMode = C.TOSTOP  // stop background jobs from output
 	FLUSHO  locMode = C.FLUSHO  // output being flushed (state)
-	PENDIN  locMode = C.PENDIN  // XXX retype pending input (state)
+	//PENDIN  locMode = C.PENDIN  // XXX retype pending input (state)
 	NOFLSH  locMode = C.NOFLSH  // don't flush after interrupt
 )
 
