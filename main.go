@@ -13,15 +13,21 @@ import (
 )
 
 func main() {
-	mw, err := walk.NewMainWindow()
-	if err != nil {
+	if _, err := RunMyDialog(nil); err != nil {
 		log.Fatal(err)
 	}
-	
-	if _, err := runDialog(mw); err != nil {
-		log.Fatal(err)
+}
+
+type MyDialog struct {
+	*walk.Dialog
+	ui myDialogUI
+}
+
+func RunMyDialog(owner walk.Form) (int, error) {
+	dlg := new(MyDialog)
+	if err := dlg.init(owner); err != nil {
+		return 0, err
 	}
-	
-	// Run the message loop.
-	mw.Run()
+
+	return dlg.Run(), nil
 }
