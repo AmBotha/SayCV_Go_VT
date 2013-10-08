@@ -28,6 +28,11 @@ type myDialogUI struct {
 	gb6		*walk.GroupBox
 	gb7		*walk.GroupBox
 	
+	displayAsRbtnGrp		*walk.RadioButtonGroup
+	displayAsAsciiRbtn		*walk.RadioButton
+	displayAsHexRbtn		*walk.RadioButton
+	displayAsInt8Rbtn		*walk.RadioButton
+	
 	baudLabel			*walk.Label
 	portLabel			*walk.Label
 	baudCbb				*walk.ComboBox
@@ -111,11 +116,39 @@ func (w *MyDialog) init(owner walk.Form) (err error) {
 		return err
 	}
 	
-	// comboBox
-	if w.ui.baudCbb, err = walk.NewComboBox(w.ui.gb2); err != nil {
+	// radioButton
+	if w.ui.displayAsAsciiRbtn, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
 		return err
 	}
-	w.ui.baudCbb.SetName("comboBox")
+	w.ui.displayAsAsciiRbtn.SetName("displayAsAsciiRbtn")
+	if err := w.ui.displayAsAsciiRbtn.SetBounds(walk.Rectangle{20, 30, 89, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.displayAsAsciiRbtn.SetText(`Ascii`); err != nil {
+		return err
+	}
+	
+	if w.ui.displayAsHexRbtn, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.displayAsHexRbtn.SetName("displayAsHexRbtn")
+	if err := w.ui.displayAsHexRbtn.SetBounds(walk.Rectangle{20, 50, 89, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.displayAsHexRbtn.SetText(`Hex`); err != nil {
+		return err
+	}
+	
+	if w.ui.displayAsInt8Rbtn, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.displayAsInt8Rbtn.SetName("displayAsInt8Rbtn")
+	if err := w.ui.displayAsInt8Rbtn.SetBounds(walk.Rectangle{20, 70, 89, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.displayAsInt8Rbtn.SetText(`int8`); err != nil {
+		return err
+	}
 	
 	// tab_2
 	if w.ui.portTabPage, err = walk.NewTabPage(); err != nil {
