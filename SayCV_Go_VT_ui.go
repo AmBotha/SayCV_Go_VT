@@ -12,6 +12,21 @@ type dialogUI struct {
 	tabWidget               *walk.TabWidget
 	displayTab              *walk.TabPage
 	displayAsGroupBox       *walk.GroupBox
+	AsciiRadioButton        *walk.RadioButton
+	AnsiRadioButton         *walk.RadioButton
+	radioButton_4           *walk.RadioButton
+	radioButton_3           *walk.RadioButton
+	radioButton_6           *walk.RadioButton
+	radioButton_5           *walk.RadioButton
+	radioButton_8           *walk.RadioButton
+	radioButton_7           *walk.RadioButton
+	radioButton_9           *walk.RadioButton
+	AsciiXRadioButton       *walk.RadioButton
+	radioButton_12          *walk.RadioButton
+	radioButton_14          *walk.RadioButton
+	radioButton_13          *walk.RadioButton
+	radioButton_11          *walk.RadioButton
+	displayAsCheckBox       *walk.CheckBox
 	portTab                 *walk.TabPage
 	portGroupBox            *walk.GroupBox
 	baudLabel               *walk.Label
@@ -32,7 +47,13 @@ type dialogUI struct {
 	dataBits6RadioButton    *walk.RadioButton
 	dataBits5RadioButton    *walk.RadioButton
 	hwFlowCtrlGroupBox      *walk.GroupBox
+	radioButton_27          *walk.RadioButton
+	radioButton_29          *walk.RadioButton
+	radioButton_28          *walk.RadioButton
+	radioButton_30          *walk.RadioButton
 	stopBitsGroupBox        *walk.GroupBox
+	radioButton_26          *walk.RadioButton
+	radioButton_25          *walk.RadioButton
 	tab_3                   *walk.TabPage
 	tab_4                   *walk.TabPage
 	tab_5                   *walk.TabPage
@@ -43,6 +64,15 @@ type dialogUI struct {
 	tab_10                  *walk.TabPage
 	widget                  *walk.Composite
 	statusGroupBox          *walk.GroupBox
+	toolButton_2            *walk.ToolButton
+	toolButton_3            *walk.ToolButton
+	toolButton_4            *walk.ToolButton
+	toolButton_6            *walk.ToolButton
+	toolButton_5            *walk.ToolButton
+	toolButton_7            *walk.ToolButton
+	toolButton_8            *walk.ToolButton
+	toolButton_9            *walk.ToolButton
+	toolButton_10           *walk.ToolButton
 }
 
 func (w *Dialog) init(owner walk.Form) (err error) {
@@ -109,6 +139,186 @@ func (w *Dialog) init(owner walk.Form) (err error) {
 		return err
 	}
 	if err := w.ui.displayAsGroupBox.SetTitle(`Display As`); err != nil {
+		return err
+	}
+
+	// AsciiRadioButton
+	if w.ui.AsciiRadioButton, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.AsciiRadioButton.SetName("AsciiRadioButton")
+	if err := w.ui.AsciiRadioButton.SetBounds(walk.Rectangle{11, 23, 53, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.AsciiRadioButton.SetText(`Ascii`); err != nil {
+		return err
+	}
+
+	// AnsiRadioButton
+	if w.ui.AnsiRadioButton, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.AnsiRadioButton.SetName("AnsiRadioButton")
+	if err := w.ui.AnsiRadioButton.SetBounds(walk.Rectangle{11, 40, 47, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.AnsiRadioButton.SetText(`Ansi`); err != nil {
+		return err
+	}
+
+	// radioButton_4
+	if w.ui.radioButton_4, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_4.SetName("radioButton_4")
+	if err := w.ui.radioButton_4.SetBounds(walk.Rectangle{11, 58, 83, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_4.SetText(`Hex(Space)`); err != nil {
+		return err
+	}
+
+	// radioButton_3
+	if w.ui.radioButton_3, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_3.SetName("radioButton_3")
+	if err := w.ui.radioButton_3.SetBounds(walk.Rectangle{11, 75, 89, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_3.SetText(`Hex + Ascii`); err != nil {
+		return err
+	}
+
+	// radioButton_6
+	if w.ui.radioButton_6, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_6.SetName("radioButton_6")
+	if err := w.ui.radioButton_6.SetBounds(walk.Rectangle{11, 92, 53, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_6.SetText(`uint8`); err != nil {
+		return err
+	}
+
+	// radioButton_5
+	if w.ui.radioButton_5, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_5.SetName("radioButton_5")
+	if err := w.ui.radioButton_5.SetBounds(walk.Rectangle{11, 110, 47, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_5.SetText(`int8`); err != nil {
+		return err
+	}
+
+	// radioButton_8
+	if w.ui.radioButton_8, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_8.SetName("radioButton_8")
+	if err := w.ui.radioButton_8.SetBounds(walk.Rectangle{11, 127, 41, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_8.SetText(`Hex`); err != nil {
+		return err
+	}
+
+	// radioButton_7
+	if w.ui.radioButton_7, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_7.SetName("radioButton_7")
+	if err := w.ui.radioButton_7.SetBounds(walk.Rectangle{11, 144, 53, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_7.SetText(`int16`); err != nil {
+		return err
+	}
+
+	// radioButton_9
+	if w.ui.radioButton_9, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_9.SetName("radioButton_9")
+	if err := w.ui.radioButton_9.SetBounds(walk.Rectangle{11, 162, 59, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_9.SetText(`uint16`); err != nil {
+		return err
+	}
+
+	// AsciiXRadioButton
+	if w.ui.AsciiXRadioButton, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.AsciiXRadioButton.SetName("AsciiXRadioButton")
+	if err := w.ui.AsciiXRadioButton.SetBounds(walk.Rectangle{11, 179, 53, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.AsciiXRadioButton.SetText(`Ascii`); err != nil {
+		return err
+	}
+
+	// radioButton_12
+	if w.ui.radioButton_12, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_12.SetName("radioButton_12")
+	if err := w.ui.radioButton_12.SetBounds(walk.Rectangle{11, 196, 59, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_12.SetText(`Binary`); err != nil {
+		return err
+	}
+
+	// radioButton_14
+	if w.ui.radioButton_14, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_14.SetName("radioButton_14")
+	if err := w.ui.radioButton_14.SetBounds(walk.Rectangle{11, 214, 59, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_14.SetText(`Nibble`); err != nil {
+		return err
+	}
+
+	// radioButton_13
+	if w.ui.radioButton_13, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_13.SetName("radioButton_13")
+	if err := w.ui.radioButton_13.SetBounds(walk.Rectangle{11, 231, 59, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_13.SetText(`Flaot4`); err != nil {
+		return err
+	}
+
+	// radioButton_11
+	if w.ui.radioButton_11, err = walk.NewRadioButton(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_11.SetName("radioButton_11")
+	if err := w.ui.radioButton_11.SetBounds(walk.Rectangle{11, 248, 65, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_11.SetText(`Hex CSV`); err != nil {
+		return err
+	}
+
+	// displayAsCheckBox
+	if w.ui.displayAsCheckBox, err = walk.NewCheckBox(w.ui.displayAsGroupBox); err != nil {
+		return err
+	}
+	w.ui.displayAsCheckBox.SetName("displayAsCheckBox")
+	if err := w.ui.displayAsCheckBox.SetBounds(walk.Rectangle{106, 23, 16, 16}); err != nil {
+		return err
+	}
+	if err := w.ui.displayAsCheckBox.SetText(``); err != nil {
 		return err
 	}
 
@@ -346,6 +556,54 @@ func (w *Dialog) init(owner walk.Form) (err error) {
 		return err
 	}
 
+	// radioButton_27
+	if w.ui.radioButton_27, err = walk.NewRadioButton(w.ui.hwFlowCtrlGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_27.SetName("radioButton_27")
+	if err := w.ui.radioButton_27.SetBounds(walk.Rectangle{11, 23, 47, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_27.SetText(`None`); err != nil {
+		return err
+	}
+
+	// radioButton_29
+	if w.ui.radioButton_29, err = walk.NewRadioButton(w.ui.hwFlowCtrlGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_29.SetName("radioButton_29")
+	if err := w.ui.radioButton_29.SetBounds(walk.Rectangle{11, 52, 65, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_29.SetText(`DTR/DSR`); err != nil {
+		return err
+	}
+
+	// radioButton_28
+	if w.ui.radioButton_28, err = walk.NewRadioButton(w.ui.hwFlowCtrlGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_28.SetName("radioButton_28")
+	if err := w.ui.radioButton_28.SetBounds(walk.Rectangle{82, 23, 65, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_28.SetText(`RTS/CTS`); err != nil {
+		return err
+	}
+
+	// radioButton_30
+	if w.ui.radioButton_30, err = walk.NewRadioButton(w.ui.hwFlowCtrlGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_30.SetName("radioButton_30")
+	if err := w.ui.radioButton_30.SetBounds(walk.Rectangle{82, 52, 77, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_30.SetText(`RS485-rts`); err != nil {
+		return err
+	}
+
 	// stopBitsGroupBox
 	if w.ui.stopBitsGroupBox, err = walk.NewGroupBox(w.ui.portGroupBox); err != nil {
 		return err
@@ -355,6 +613,30 @@ func (w *Dialog) init(owner walk.Form) (err error) {
 		return err
 	}
 	if err := w.ui.stopBitsGroupBox.SetTitle(`Stop Bits`); err != nil {
+		return err
+	}
+
+	// radioButton_26
+	if w.ui.radioButton_26, err = walk.NewRadioButton(w.ui.stopBitsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_26.SetName("radioButton_26")
+	if err := w.ui.radioButton_26.SetBounds(walk.Rectangle{11, 23, 59, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_26.SetText(`1 bits`); err != nil {
+		return err
+	}
+
+	// radioButton_25
+	if w.ui.radioButton_25, err = walk.NewRadioButton(w.ui.stopBitsGroupBox); err != nil {
+		return err
+	}
+	w.ui.radioButton_25.SetName("radioButton_25")
+	if err := w.ui.radioButton_25.SetBounds(walk.Rectangle{76, 23, 59, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.radioButton_25.SetText(`2 bits`); err != nil {
 		return err
 	}
 
@@ -472,6 +754,114 @@ func (w *Dialog) init(owner walk.Form) (err error) {
 		return err
 	}
 	if err := w.ui.statusGroupBox.SetTitle(`Status`); err != nil {
+		return err
+	}
+
+	// toolButton_2
+	if w.ui.toolButton_2, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_2.SetName("toolButton_2")
+	if err := w.ui.toolButton_2.SetBounds(walk.Rectangle{11, 25, 59, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_2.SetText(`Connected`); err != nil {
+		return err
+	}
+
+	// toolButton_3
+	if w.ui.toolButton_3, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_3.SetName("toolButton_3")
+	if err := w.ui.toolButton_3.SetBounds(walk.Rectangle{11, 51, 55, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_3.SetText(`RXD(2)`); err != nil {
+		return err
+	}
+
+	// toolButton_4
+	if w.ui.toolButton_4, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_4.SetName("toolButton_4")
+	if err := w.ui.toolButton_4.SetBounds(walk.Rectangle{11, 77, 55, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_4.SetText(`TXD(3)`); err != nil {
+		return err
+	}
+
+	// toolButton_6
+	if w.ui.toolButton_6, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_6.SetName("toolButton_6")
+	if err := w.ui.toolButton_6.SetBounds(walk.Rectangle{11, 103, 55, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_6.SetText(`CTS(8)`); err != nil {
+		return err
+	}
+
+	// toolButton_5
+	if w.ui.toolButton_5, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_5.SetName("toolButton_5")
+	if err := w.ui.toolButton_5.SetBounds(walk.Rectangle{11, 129, 55, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_5.SetText(`DCD(1)`); err != nil {
+		return err
+	}
+
+	// toolButton_7
+	if w.ui.toolButton_7, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_7.SetName("toolButton_7")
+	if err := w.ui.toolButton_7.SetBounds(walk.Rectangle{11, 155, 55, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_7.SetText(`DSR(6)`); err != nil {
+		return err
+	}
+
+	// toolButton_8
+	if w.ui.toolButton_8, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_8.SetName("toolButton_8")
+	if err := w.ui.toolButton_8.SetBounds(walk.Rectangle{11, 181, 59, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_8.SetText(`Ring(9)`); err != nil {
+		return err
+	}
+
+	// toolButton_9
+	if w.ui.toolButton_9, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_9.SetName("toolButton_9")
+	if err := w.ui.toolButton_9.SetBounds(walk.Rectangle{11, 207, 49, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_9.SetText(`BREAK`); err != nil {
+		return err
+	}
+
+	// toolButton_10
+	if w.ui.toolButton_10, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_10.SetName("toolButton_10")
+	if err := w.ui.toolButton_10.SetBounds(walk.Rectangle{11, 233, 49, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_10.SetText(`Error`); err != nil {
 		return err
 	}
 
