@@ -1,0 +1,702 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>Dialog</class>
+ <widget class="QDialog" name="Dialog">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>670</width>
+    <height>628</height>
+   </rect>
+  </property>
+  <property name="windowTitle">
+   <string>Dialog</string>
+  </property>
+  <widget class="QTextEdit" name="textEdit">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>0</y>
+     <width>800</width>
+     <height>300</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QTabWidget" name="tabWidget">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>300</y>
+     <width>571</width>
+     <height>291</height>
+    </rect>
+   </property>
+   <property name="currentIndex">
+    <number>0</number>
+   </property>
+   <widget class="QWidget" name="displayTab">
+    <attribute name="title">
+     <string>Display</string>
+    </attribute>
+    <widget class="QGroupBox" name="displayAsGroupBox">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>131</width>
+       <height>271</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string>Display As</string>
+     </property>
+     <layout class="QFormLayout" name="formLayout">
+      <item row="0" column="0">
+       <widget class="QRadioButton" name="AsciiRadioButton">
+        <property name="text">
+         <string>Ascii</string>
+        </property>
+       </widget>
+      </item>
+      <item row="1" column="0">
+       <widget class="QRadioButton" name="AnsiRadioButton">
+        <property name="text">
+         <string>Ansi</string>
+        </property>
+       </widget>
+      </item>
+      <item row="2" column="0">
+       <widget class="QRadioButton" name="radioButton_4">
+        <property name="text">
+         <string>Hex(Space)</string>
+        </property>
+       </widget>
+      </item>
+      <item row="3" column="0">
+       <widget class="QRadioButton" name="radioButton_3">
+        <property name="text">
+         <string>Hex + Ascii</string>
+        </property>
+       </widget>
+      </item>
+      <item row="4" column="0">
+       <widget class="QRadioButton" name="radioButton_6">
+        <property name="text">
+         <string>uint8</string>
+        </property>
+       </widget>
+      </item>
+      <item row="5" column="0">
+       <widget class="QRadioButton" name="radioButton_5">
+        <property name="text">
+         <string>int8</string>
+        </property>
+       </widget>
+      </item>
+      <item row="6" column="0">
+       <widget class="QRadioButton" name="radioButton_8">
+        <property name="text">
+         <string>Hex</string>
+        </property>
+       </widget>
+      </item>
+      <item row="7" column="0">
+       <widget class="QRadioButton" name="radioButton_7">
+        <property name="text">
+         <string>int16</string>
+        </property>
+       </widget>
+      </item>
+      <item row="8" column="0">
+       <widget class="QRadioButton" name="radioButton_9">
+        <property name="text">
+         <string>uint16</string>
+        </property>
+       </widget>
+      </item>
+      <item row="9" column="0">
+       <widget class="QRadioButton" name="AsciiXRadioButton">
+        <property name="text">
+         <string>Ascii</string>
+        </property>
+       </widget>
+      </item>
+      <item row="10" column="0">
+       <widget class="QRadioButton" name="radioButton_12">
+        <property name="text">
+         <string>Binary</string>
+        </property>
+       </widget>
+      </item>
+      <item row="11" column="0">
+       <widget class="QRadioButton" name="radioButton_14">
+        <property name="text">
+         <string>Nibble</string>
+        </property>
+       </widget>
+      </item>
+      <item row="12" column="0">
+       <widget class="QRadioButton" name="radioButton_13">
+        <property name="text">
+         <string>Flaot4</string>
+        </property>
+       </widget>
+      </item>
+      <item row="13" column="0">
+       <widget class="QRadioButton" name="radioButton_11">
+        <property name="text">
+         <string>Hex CSV</string>
+        </property>
+       </widget>
+      </item>
+      <item row="0" column="1">
+       <widget class="QCheckBox" name="displayAsCheckBox">
+        <property name="toolTip">
+         <string>Clear Terminal When Display Changes</string>
+        </property>
+        <property name="text">
+         <string/>
+        </property>
+       </widget>
+      </item>
+     </layout>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="portTab">
+    <attribute name="title">
+     <string>Port</string>
+    </attribute>
+    <widget class="QGroupBox" name="portGroupBox">
+     <property name="geometry">
+      <rect>
+       <x>0</x>
+       <y>0</y>
+       <width>561</width>
+       <height>221</height>
+      </rect>
+     </property>
+     <property name="title">
+      <string/>
+     </property>
+     <widget class="QLabel" name="baudLabel">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>30</y>
+        <width>24</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Baud</string>
+      </property>
+     </widget>
+     <widget class="QComboBox" name="baudComboBox">
+      <property name="geometry">
+       <rect>
+        <x>40</x>
+        <y>20</y>
+        <width>74</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>110</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>300</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>1200</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2400</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4800</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9600</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>19200</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>38400</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>57600</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>115200</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QComboBox" name="portComboBox">
+      <property name="geometry">
+       <rect>
+        <x>160</x>
+        <y>20</y>
+        <width>74</width>
+        <height>22</height>
+       </rect>
+      </property>
+      <item>
+       <property name="text">
+        <string>1</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>2</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>3</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>4</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>5</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>6</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>7</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>8</string>
+       </property>
+      </item>
+      <item>
+       <property name="text">
+        <string>9</string>
+       </property>
+      </item>
+     </widget>
+     <widget class="QLabel" name="portLabel">
+      <property name="geometry">
+       <rect>
+        <x>130</x>
+        <y>30</y>
+        <width>24</width>
+        <height>12</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Port</string>
+      </property>
+     </widget>
+     <widget class="QPushButton" name="pushButton">
+      <property name="geometry">
+       <rect>
+        <x>250</x>
+        <y>20</y>
+        <width>75</width>
+        <height>23</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string>Open</string>
+      </property>
+     </widget>
+     <widget class="QCheckBox" name="portCheckBox">
+      <property name="geometry">
+       <rect>
+        <x>340</x>
+        <y>20</y>
+        <width>13</width>
+        <height>13</height>
+       </rect>
+      </property>
+      <property name="text">
+       <string/>
+      </property>
+     </widget>
+     <widget class="QGroupBox" name="parityGroupBox">
+      <property name="geometry">
+       <rect>
+        <x>10</x>
+        <y>70</y>
+        <width>73</width>
+        <height>143</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Parity</string>
+      </property>
+      <widget class="QRadioButton" name="parityNoneRadioButton_2">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>23</y>
+         <width>47</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>None</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="parityOddRadioButton">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>46</y>
+         <width>41</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Odd</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="parityEvenRadioButton">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>69</y>
+         <width>47</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Even</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="parityMarkRadioButton">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>92</y>
+         <width>47</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Mark</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="paritySpaceRadioButton">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>115</y>
+         <width>53</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>Space</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="dataBitsGroupBox">
+      <property name="geometry">
+       <rect>
+        <x>87</x>
+        <y>70</y>
+        <width>79</width>
+        <height>143</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Data Bits</string>
+      </property>
+      <widget class="QRadioButton" name="dataBits8RadioButton">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>27</y>
+         <width>55</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>8 bits</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="dataBits7RadioButton">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>54</y>
+         <width>55</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>7 bits</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="dataBits6RadioButton">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>81</y>
+         <width>55</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>6 bits</string>
+       </property>
+      </widget>
+      <widget class="QRadioButton" name="dataBits5RadioButton">
+       <property name="geometry">
+        <rect>
+         <x>11</x>
+         <y>108</y>
+         <width>55</width>
+         <height>17</height>
+        </rect>
+       </property>
+       <property name="text">
+        <string>5 bits</string>
+       </property>
+      </widget>
+     </widget>
+     <widget class="QGroupBox" name="hwFlowCtrlGroupBox">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>126</y>
+        <width>170</width>
+        <height>80</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Hardware Flow Control</string>
+      </property>
+      <layout class="QFormLayout" name="formLayout_2">
+       <item row="0" column="0">
+        <widget class="QRadioButton" name="radioButton_27">
+         <property name="text">
+          <string>None</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="0">
+        <widget class="QRadioButton" name="radioButton_29">
+         <property name="text">
+          <string>DTR/DSR</string>
+         </property>
+        </widget>
+       </item>
+       <item row="0" column="1">
+        <widget class="QRadioButton" name="radioButton_28">
+         <property name="text">
+          <string>RTS/CTS</string>
+         </property>
+        </widget>
+       </item>
+       <item row="2" column="1">
+        <widget class="QRadioButton" name="radioButton_30">
+         <property name="text">
+          <string>RS485-rts</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+     <widget class="QGroupBox" name="stopBitsGroupBox">
+      <property name="geometry">
+       <rect>
+        <x>170</x>
+        <y>70</y>
+        <width>146</width>
+        <height>51</height>
+       </rect>
+      </property>
+      <property name="title">
+       <string>Stop Bits</string>
+      </property>
+      <layout class="QHBoxLayout" name="horizontalLayout">
+       <item>
+        <widget class="QRadioButton" name="radioButton_26">
+         <property name="text">
+          <string>1 bits</string>
+         </property>
+        </widget>
+       </item>
+       <item>
+        <widget class="QRadioButton" name="radioButton_25">
+         <property name="text">
+          <string>2 bits</string>
+         </property>
+        </widget>
+       </item>
+      </layout>
+     </widget>
+    </widget>
+   </widget>
+   <widget class="QWidget" name="tab_3">
+    <attribute name="title">
+     <string>Capture</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_4">
+    <attribute name="title">
+     <string>Pins</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_5">
+    <attribute name="title">
+     <string>Send</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_6">
+    <attribute name="title">
+     <string>Echo Port</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_7">
+    <attribute name="title">
+     <string>I2C</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_8">
+    <attribute name="title">
+     <string>I2C-2</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_9">
+    <attribute name="title">
+     <string>I2CMisc</string>
+    </attribute>
+   </widget>
+   <widget class="QWidget" name="tab_10">
+    <attribute name="title">
+     <string>Misc</string>
+    </attribute>
+   </widget>
+  </widget>
+  <widget class="QWidget" name="widget" native="true">
+   <property name="geometry">
+    <rect>
+     <x>0</x>
+     <y>600</y>
+     <width>800</width>
+     <height>32</height>
+    </rect>
+   </property>
+  </widget>
+  <widget class="QGroupBox" name="statusGroupBox">
+   <property name="geometry">
+    <rect>
+     <x>580</x>
+     <y>320</y>
+     <width>81</width>
+     <height>271</height>
+    </rect>
+   </property>
+   <property name="title">
+    <string>Status</string>
+   </property>
+   <layout class="QVBoxLayout" name="verticalLayout_3">
+    <item>
+     <widget class="QToolButton" name="toolButton_2">
+      <property name="text">
+       <string>Connected</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolButton" name="toolButton_3">
+      <property name="text">
+       <string>RXD(2)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolButton" name="toolButton_4">
+      <property name="text">
+       <string>TXD(3)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolButton" name="toolButton_6">
+      <property name="text">
+       <string>CTS(8)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolButton" name="toolButton_5">
+      <property name="text">
+       <string>DCD(1)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolButton" name="toolButton_7">
+      <property name="text">
+       <string>DSR(6)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolButton" name="toolButton_8">
+      <property name="text">
+       <string>Ring(9)</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolButton" name="toolButton_9">
+      <property name="text">
+       <string>BREAK</string>
+      </property>
+     </widget>
+    </item>
+    <item>
+     <widget class="QToolButton" name="toolButton_10">
+      <property name="text">
+       <string>Error</string>
+      </property>
+     </widget>
+    </item>
+   </layout>
+  </widget>
+  <zorder>tabWidget</zorder>
+  <zorder>textEdit</zorder>
+  <zorder>widget</zorder>
+  <zorder>statusGroupBox</zorder>
+ </widget>
+ <resources/>
+ <connections/>
+</ui>

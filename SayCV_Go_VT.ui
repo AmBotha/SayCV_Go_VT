@@ -6,8 +6,8 @@
    <rect>
     <x>0</x>
     <y>0</y>
-    <width>800</width>
-    <height>600</height>
+    <width>670</width>
+    <height>628</height>
    </rect>
   </property>
   <property name="windowTitle">
@@ -29,38 +29,37 @@
      <x>0</x>
      <y>300</y>
      <width>571</width>
-     <height>268</height>
+     <height>291</height>
     </rect>
    </property>
    <property name="currentIndex">
-    <number>1</number>
+    <number>0</number>
    </property>
-   <widget class="QWidget" name="tab">
+   <widget class="QWidget" name="displayTab">
     <attribute name="title">
      <string>Display</string>
     </attribute>
-    <widget class="QGroupBox" name="groupBox">
+    <widget class="QGroupBox" name="displayAsGroupBox">
      <property name="geometry">
       <rect>
        <x>0</x>
        <y>0</y>
-       <width>130</width>
-       <height>241</height>
+       <width>131</width>
+       <height>271</height>
       </rect>
      </property>
      <property name="title">
       <string>Display As</string>
      </property>
-     <layout class="QFormLayout" name="formLayout">
       <item row="0" column="0">
-       <widget class="QRadioButton" name="radioButton">
+       <widget class="QRadioButton" name="AsciiRadioButton">
         <property name="text">
          <string>Ascii</string>
         </property>
        </widget>
       </item>
       <item row="1" column="0">
-       <widget class="QRadioButton" name="radioButton_2">
+       <widget class="QRadioButton" name="AnsiRadioButton">
         <property name="text">
          <string>Ansi</string>
         </property>
@@ -116,7 +115,7 @@
        </widget>
       </item>
       <item row="9" column="0">
-       <widget class="QRadioButton" name="radioButton_10">
+       <widget class="QRadioButton" name="AsciiXRadioButton">
         <property name="text">
          <string>Ascii</string>
         </property>
@@ -151,7 +150,7 @@
        </widget>
       </item>
       <item row="0" column="1">
-       <widget class="QCheckBox" name="checkBox_1">
+       <widget class="QCheckBox" name="displayAsCheckBox">
         <property name="toolTip">
          <string>Clear Terminal When Display Changes</string>
         </property>
@@ -160,14 +159,13 @@
         </property>
        </widget>
       </item>
-     </layout>
     </widget>
    </widget>
-   <widget class="QWidget" name="tab_2">
+   <widget class="QWidget" name="portTab">
     <attribute name="title">
      <string>Port</string>
     </attribute>
-    <widget class="QGroupBox" name="groupBox_2">
+    <widget class="QGroupBox" name="portGroupBox">
      <property name="geometry">
       <rect>
        <x>0</x>
@@ -177,9 +175,9 @@
       </rect>
      </property>
      <property name="title">
-      <string>GroupBox</string>
+      <string/>
      </property>
-     <widget class="QLabel" name="label">
+     <widget class="QLabel" name="baudLabel">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -192,7 +190,7 @@
        <string>Baud</string>
       </property>
      </widget>
-     <widget class="QComboBox" name="comboBox">
+     <widget class="QComboBox" name="baudComboBox">
       <property name="geometry">
        <rect>
         <x>40</x>
@@ -252,7 +250,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QComboBox" name="comboBox_2">
+     <widget class="QComboBox" name="portComboBox">
       <property name="geometry">
        <rect>
         <x>160</x>
@@ -307,7 +305,7 @@
        </property>
       </item>
      </widget>
-     <widget class="QLabel" name="label_2">
+     <widget class="QLabel" name="portLabel">
       <property name="geometry">
        <rect>
         <x>130</x>
@@ -333,7 +331,7 @@
        <string>Open</string>
       </property>
      </widget>
-     <widget class="QCheckBox" name="checkBox">
+     <widget class="QCheckBox" name="portCheckBox">
       <property name="geometry">
        <rect>
         <x>340</x>
@@ -346,7 +344,7 @@
        <string/>
       </property>
      </widget>
-     <widget class="QGroupBox" name="groupBox_3">
+     <widget class="QGroupBox" name="parityGroupBox">
       <property name="geometry">
        <rect>
         <x>10</x>
@@ -358,7 +356,7 @@
       <property name="title">
        <string>Parity</string>
       </property>
-      <widget class="QRadioButton" name="radioButton_15">
+      <widget class="QRadioButton" name="parityNoneRadioButton_2">
        <property name="geometry">
         <rect>
          <x>11</x>
@@ -371,7 +369,7 @@
         <string>None</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_16">
+      <widget class="QRadioButton" name="parityOddRadioButton">
        <property name="geometry">
         <rect>
          <x>11</x>
@@ -384,7 +382,7 @@
         <string>Odd</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_17">
+      <widget class="QRadioButton" name="parityEvenRadioButton">
        <property name="geometry">
         <rect>
          <x>11</x>
@@ -397,7 +395,7 @@
         <string>Even</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_18">
+      <widget class="QRadioButton" name="parityMarkRadioButton">
        <property name="geometry">
         <rect>
          <x>11</x>
@@ -410,7 +408,7 @@
         <string>Mark</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_19">
+      <widget class="QRadioButton" name="paritySpaceRadioButton">
        <property name="geometry">
         <rect>
          <x>11</x>
@@ -424,7 +422,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QGroupBox" name="groupBox_4">
+     <widget class="QGroupBox" name="dataBitsGroupBox">
       <property name="geometry">
        <rect>
         <x>87</x>
@@ -436,7 +434,7 @@
       <property name="title">
        <string>Data Bits</string>
       </property>
-      <widget class="QRadioButton" name="radioButton_20">
+      <widget class="QRadioButton" name="dataBits8RadioButton">
        <property name="geometry">
         <rect>
          <x>11</x>
@@ -449,7 +447,7 @@
         <string>8 bits</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_21">
+      <widget class="QRadioButton" name="dataBits7RadioButton">
        <property name="geometry">
         <rect>
          <x>11</x>
@@ -462,7 +460,7 @@
         <string>7 bits</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_22">
+      <widget class="QRadioButton" name="dataBits6RadioButton">
        <property name="geometry">
         <rect>
          <x>11</x>
@@ -475,7 +473,7 @@
         <string>6 bits</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_23">
+      <widget class="QRadioButton" name="dataBits5RadioButton">
        <property name="geometry">
         <rect>
          <x>11</x>
@@ -489,7 +487,7 @@
        </property>
       </widget>
      </widget>
-     <widget class="QGroupBox" name="groupBox_6">
+     <widget class="QGroupBox" name="hwFlowCtrlGroupBox">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -501,7 +499,6 @@
       <property name="title">
        <string>Hardware Flow Control</string>
       </property>
-      <layout class="QFormLayout" name="formLayout_2">
        <item row="0" column="0">
         <widget class="QRadioButton" name="radioButton_27">
          <property name="text">
@@ -530,9 +527,8 @@
          </property>
         </widget>
        </item>
-      </layout>
      </widget>
-     <widget class="QGroupBox" name="groupBox_5">
+     <widget class="QGroupBox" name="stopBitsGroupBox">
       <property name="geometry">
        <rect>
         <x>170</x>
@@ -544,7 +540,6 @@
       <property name="title">
        <string>Stop Bits</string>
       </property>
-      <layout class="QHBoxLayout" name="horizontalLayout">
        <item>
         <widget class="QRadioButton" name="radioButton_26">
          <property name="text">
@@ -559,7 +554,6 @@
          </property>
         </widget>
        </item>
-      </layout>
      </widget>
     </widget>
    </widget>
@@ -608,25 +602,24 @@
    <property name="geometry">
     <rect>
      <x>0</x>
-     <y>568</y>
+     <y>600</y>
      <width>800</width>
      <height>32</height>
     </rect>
    </property>
   </widget>
-  <widget class="QGroupBox" name="groupBox">
+  <widget class="QGroupBox" name="statusGroupBox">
    <property name="geometry">
     <rect>
      <x>580</x>
      <y>320</y>
-     <width>71</width>
-     <height>221</height>
+     <width>81</width>
+     <height>271</height>
     </rect>
    </property>
    <property name="title">
     <string>Status</string>
    </property>
-   <layout class="QVBoxLayout" name="verticalLayout_3">
     <item>
      <widget class="QToolButton" name="toolButton_2">
       <property name="text">
@@ -690,12 +683,11 @@
       </property>
      </widget>
     </item>
-   </layout>
   </widget>
   <zorder>tabWidget</zorder>
   <zorder>textEdit</zorder>
   <zorder>widget</zorder>
-  <zorder>groupBox</zorder>
+  <zorder>statusGroupBox</zorder>
  </widget>
  <resources/>
  <connections/>
