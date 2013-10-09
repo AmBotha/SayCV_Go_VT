@@ -8,71 +8,87 @@ import (
 )
 
 type dialogUI struct {
-	textEdit                *walk.TextEdit
-	tabWidget               *walk.TabWidget
-	displayTab              *walk.TabPage
-	displayAsGroupBox       *walk.GroupBox
-	AsciiRadioButton        *walk.RadioButton
-	AnsiRadioButton         *walk.RadioButton
-	radioButton_4           *walk.RadioButton
-	radioButton_3           *walk.RadioButton
-	radioButton_6           *walk.RadioButton
-	radioButton_5           *walk.RadioButton
-	radioButton_8           *walk.RadioButton
-	radioButton_7           *walk.RadioButton
-	radioButton_9           *walk.RadioButton
-	AsciiXRadioButton       *walk.RadioButton
-	radioButton_12          *walk.RadioButton
-	radioButton_14          *walk.RadioButton
-	radioButton_13          *walk.RadioButton
-	radioButton_11          *walk.RadioButton
-	displayAsCheckBox       *walk.CheckBox
-	portTab                 *walk.TabPage
-	portGroupBox            *walk.GroupBox
-	baudLabel               *walk.Label
-	baudComboBox            *walk.ComboBox
-	portComboBox            *walk.ComboBox
-	portLabel               *walk.Label
-	pushButton              *walk.PushButton
-	portCheckBox            *walk.CheckBox
-	parityGroupBox          *walk.GroupBox
-	parityNoneRadioButton_2 *walk.RadioButton
-	parityOddRadioButton    *walk.RadioButton
-	parityEvenRadioButton   *walk.RadioButton
-	parityMarkRadioButton   *walk.RadioButton
-	paritySpaceRadioButton  *walk.RadioButton
-	dataBitsGroupBox        *walk.GroupBox
-	dataBits8RadioButton    *walk.RadioButton
-	dataBits7RadioButton    *walk.RadioButton
-	dataBits6RadioButton    *walk.RadioButton
-	dataBits5RadioButton    *walk.RadioButton
-	hwFlowCtrlGroupBox      *walk.GroupBox
-	radioButton_27          *walk.RadioButton
-	radioButton_29          *walk.RadioButton
-	radioButton_28          *walk.RadioButton
-	radioButton_30          *walk.RadioButton
-	stopBitsGroupBox        *walk.GroupBox
-	radioButton_26          *walk.RadioButton
-	radioButton_25          *walk.RadioButton
-	tab_3                   *walk.TabPage
-	tab_4                   *walk.TabPage
-	tab_5                   *walk.TabPage
-	tab_6                   *walk.TabPage
-	tab_7                   *walk.TabPage
-	tab_8                   *walk.TabPage
-	tab_9                   *walk.TabPage
-	tab_10                  *walk.TabPage
-	widget                  *walk.Composite
-	statusGroupBox          *walk.GroupBox
-	toolButton_2            *walk.ToolButton
-	toolButton_3            *walk.ToolButton
-	toolButton_4            *walk.ToolButton
-	toolButton_6            *walk.ToolButton
-	toolButton_5            *walk.ToolButton
-	toolButton_7            *walk.ToolButton
-	toolButton_8            *walk.ToolButton
-	toolButton_9            *walk.ToolButton
-	toolButton_10           *walk.ToolButton
+	textEdit               *walk.TextEdit
+	tabWidget              *walk.TabWidget
+	displayTab             *walk.TabPage
+	statusGroupBox         *walk.GroupBox
+	toolButton_2           *walk.ToolButton
+	toolButton_3           *walk.ToolButton
+	toolButton_4           *walk.ToolButton
+	toolButton_6           *walk.ToolButton
+	toolButton_5           *walk.ToolButton
+	toolButton_7           *walk.ToolButton
+	toolButton_8           *walk.ToolButton
+	toolButton_9           *walk.ToolButton
+	toolButton_10          *walk.ToolButton
+	stopBitsGroupBox_2     *walk.GroupBox
+	checkBox_6             *walk.CheckBox
+	baudComboBox_2         *walk.ComboBox
+	baudLabel_2            *walk.Label
+	toolButton_11          *walk.ToolButton
+	toolButton_12          *walk.ToolButton
+	bkgDisplayGroupBox     *walk.GroupBox
+	displayAsGroupBox      *walk.GroupBox
+	AsciiRadioButton       *walk.RadioButton
+	AnsiRadioButton        *walk.RadioButton
+	radioButton_4          *walk.RadioButton
+	radioButton_3          *walk.RadioButton
+	radioButton_6          *walk.RadioButton
+	radioButton_5          *walk.RadioButton
+	radioButton_8          *walk.RadioButton
+	radioButton_7          *walk.RadioButton
+	radioButton_9          *walk.RadioButton
+	AsciiXRadioButton      *walk.RadioButton
+	radioButton_12         *walk.RadioButton
+	radioButton_14         *walk.RadioButton
+	radioButton_13         *walk.RadioButton
+	radioButton_11         *walk.RadioButton
+	displayAsCheckBox      *walk.CheckBox
+	rowsSpinBox            *walk.NumberEdit
+	colsSpinBox            *walk.NumberEdit
+	checkBox_5             *walk.CheckBox
+	checkBox_7             *walk.CheckBox
+	checkBox_2             *walk.CheckBox
+	checkBox_4             *walk.CheckBox
+	checkBox               *walk.CheckBox
+	checkBox_3             *walk.CheckBox
+	rowsLabel              *walk.Label
+	colsLabel              *walk.Label
+	portTab                *walk.TabPage
+	portGroupBox           *walk.GroupBox
+	baudLabel              *walk.Label
+	baudComboBox           *walk.ComboBox
+	portComboBox           *walk.ComboBox
+	portLabel              *walk.Label
+	pushButton             *walk.PushButton
+	portCheckBox           *walk.CheckBox
+	parityGroupBox         *walk.GroupBox
+	parityNoneRadioButton  *walk.RadioButton
+	parityOddRadioButton   *walk.RadioButton
+	parityEvenRadioButton  *walk.RadioButton
+	parityMarkRadioButton  *walk.RadioButton
+	paritySpaceRadioButton *walk.RadioButton
+	dataBitsGroupBox       *walk.GroupBox
+	dataBits8RadioButton   *walk.RadioButton
+	dataBits7RadioButton   *walk.RadioButton
+	dataBits6RadioButton   *walk.RadioButton
+	dataBits5RadioButton   *walk.RadioButton
+	hwFlowCtrlGroupBox     *walk.GroupBox
+	radioButton_27         *walk.RadioButton
+	radioButton_29         *walk.RadioButton
+	radioButton_28         *walk.RadioButton
+	radioButton_30         *walk.RadioButton
+	stopBitsGroupBox       *walk.GroupBox
+	radioButton_26         *walk.RadioButton
+	radioButton_25         *walk.RadioButton
+	tab_3                  *walk.TabPage
+	tab_4                  *walk.TabPage
+	tab_5                  *walk.TabPage
+	tab_6                  *walk.TabPage
+	tab_7                  *walk.TabPage
+	tab_8                  *walk.TabPage
+	tab_9                  *walk.TabPage
+	tab_10                 *walk.TabPage
 }
 
 func (w *Dialog) init(owner walk.Form) (err error) {
@@ -93,7 +109,7 @@ func (w *Dialog) init(owner walk.Form) (err error) {
 	}
 
 	w.SetName("Dialog")
-	if err := w.SetClientSize(walk.Size{670, 628}); err != nil {
+	if err := w.SetClientSize(walk.Size{800, 600}); err != nil {
 		return err
 	}
 	if err := w.SetTitle(`Dialog`); err != nil {
@@ -114,7 +130,7 @@ func (w *Dialog) init(owner walk.Form) (err error) {
 		return err
 	}
 	w.ui.tabWidget.SetName("tabWidget")
-	if err := w.ui.tabWidget.SetBounds(walk.Rectangle{0, 300, 571, 291}); err != nil {
+	if err := w.ui.tabWidget.SetBounds(walk.Rectangle{0, 300, 801, 271}); err != nil {
 		return err
 	}
 
@@ -130,12 +146,213 @@ func (w *Dialog) init(owner walk.Form) (err error) {
 		return err
 	}
 
+	// statusGroupBox
+	if w.ui.statusGroupBox, err = walk.NewGroupBox(w.ui.displayTab); err != nil {
+		return err
+	}
+	w.ui.statusGroupBox.SetName("statusGroupBox")
+	if err := w.ui.statusGroupBox.SetBounds(walk.Rectangle{710, 0, 81, 241}); err != nil {
+		return err
+	}
+	if err := w.ui.statusGroupBox.SetTitle(`Status`); err != nil {
+		return err
+	}
+
+	// toolButton_2
+	if w.ui.toolButton_2, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_2.SetName("toolButton_2")
+	if err := w.ui.toolButton_2.SetBounds(walk.Rectangle{10, 12, 59, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_2.SetText(`Connected`); err != nil {
+		return err
+	}
+
+	// toolButton_3
+	if w.ui.toolButton_3, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_3.SetName("toolButton_3")
+	if err := w.ui.toolButton_3.SetBounds(walk.Rectangle{10, 38, 55, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_3.SetText(`RXD(2)`); err != nil {
+		return err
+	}
+
+	// toolButton_4
+	if w.ui.toolButton_4, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_4.SetName("toolButton_4")
+	if err := w.ui.toolButton_4.SetBounds(walk.Rectangle{10, 64, 55, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_4.SetText(`TXD(3)`); err != nil {
+		return err
+	}
+
+	// toolButton_6
+	if w.ui.toolButton_6, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_6.SetName("toolButton_6")
+	if err := w.ui.toolButton_6.SetBounds(walk.Rectangle{10, 90, 55, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_6.SetText(`CTS(8)`); err != nil {
+		return err
+	}
+
+	// toolButton_5
+	if w.ui.toolButton_5, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_5.SetName("toolButton_5")
+	if err := w.ui.toolButton_5.SetBounds(walk.Rectangle{10, 116, 55, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_5.SetText(`DCD(1)`); err != nil {
+		return err
+	}
+
+	// toolButton_7
+	if w.ui.toolButton_7, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_7.SetName("toolButton_7")
+	if err := w.ui.toolButton_7.SetBounds(walk.Rectangle{10, 142, 55, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_7.SetText(`DSR(6)`); err != nil {
+		return err
+	}
+
+	// toolButton_8
+	if w.ui.toolButton_8, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_8.SetName("toolButton_8")
+	if err := w.ui.toolButton_8.SetBounds(walk.Rectangle{10, 168, 59, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_8.SetText(`Ring(9)`); err != nil {
+		return err
+	}
+
+	// toolButton_9
+	if w.ui.toolButton_9, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_9.SetName("toolButton_9")
+	if err := w.ui.toolButton_9.SetBounds(walk.Rectangle{10, 194, 49, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_9.SetText(`BREAK`); err != nil {
+		return err
+	}
+
+	// toolButton_10
+	if w.ui.toolButton_10, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
+		return err
+	}
+	w.ui.toolButton_10.SetName("toolButton_10")
+	if err := w.ui.toolButton_10.SetBounds(walk.Rectangle{10, 220, 49, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_10.SetText(`Error`); err != nil {
+		return err
+	}
+
+	// stopBitsGroupBox_2
+	if w.ui.stopBitsGroupBox_2, err = walk.NewGroupBox(w.ui.displayTab); err != nil {
+		return err
+	}
+	w.ui.stopBitsGroupBox_2.SetName("stopBitsGroupBox_2")
+	if err := w.ui.stopBitsGroupBox_2.SetBounds(walk.Rectangle{140, 110, 147, 68}); err != nil {
+		return err
+	}
+	if err := w.ui.stopBitsGroupBox_2.SetTitle(`Data Frames`); err != nil {
+		return err
+	}
+
+	// checkBox_6
+	if w.ui.checkBox_6, err = walk.NewCheckBox(w.ui.stopBitsGroupBox_2); err != nil {
+		return err
+	}
+	w.ui.checkBox_6.SetName("checkBox_6")
+	if err := w.ui.checkBox_6.SetBounds(walk.Rectangle{10, 40, 54, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.checkBox_6.SetText(`Single`); err != nil {
+		return err
+	}
+
+	// baudComboBox_2
+	if w.ui.baudComboBox_2, err = walk.NewComboBox(w.ui.stopBitsGroupBox_2); err != nil {
+		return err
+	}
+	w.ui.baudComboBox_2.SetName("baudComboBox_2")
+	if err := w.ui.baudComboBox_2.SetBounds(walk.Rectangle{70, 10, 67, 20}); err != nil {
+		return err
+	}
+
+	// baudLabel_2
+	if w.ui.baudLabel_2, err = walk.NewLabel(w.ui.stopBitsGroupBox_2); err != nil {
+		return err
+	}
+	w.ui.baudLabel_2.SetName("baudLabel_2")
+	if err := w.ui.baudLabel_2.SetBounds(walk.Rectangle{10, 20, 30, 12}); err != nil {
+		return err
+	}
+	if err := w.ui.baudLabel_2.SetText(`Bytes`); err != nil {
+		return err
+	}
+
+	// toolButton_11
+	if w.ui.toolButton_11, err = walk.NewToolButton(w.ui.stopBitsGroupBox_2); err != nil {
+		return err
+	}
+	w.ui.toolButton_11.SetName("toolButton_11")
+	if err := w.ui.toolButton_11.SetBounds(walk.Rectangle{90, 40, 43, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_11.SetText(`Gulp`); err != nil {
+		return err
+	}
+
+	// toolButton_12
+	if w.ui.toolButton_12, err = walk.NewToolButton(w.ui.displayTab); err != nil {
+		return err
+	}
+	w.ui.toolButton_12.SetName("toolButton_12")
+	if err := w.ui.toolButton_12.SetBounds(walk.Rectangle{140, 220, 97, 18}); err != nil {
+		return err
+	}
+	if err := w.ui.toolButton_12.SetText(`Terminal Font`); err != nil {
+		return err
+	}
+
+	// bkgDisplayGroupBox
+	if w.ui.bkgDisplayGroupBox, err = walk.NewGroupBox(w.ui.displayTab); err != nil {
+		return err
+	}
+	w.ui.bkgDisplayGroupBox.SetName("bkgDisplayGroupBox")
+	if err := w.ui.bkgDisplayGroupBox.SetBounds(walk.Rectangle{0, 0, 801, 251}); err != nil {
+		return err
+	}
+	if err := w.ui.bkgDisplayGroupBox.SetTitle(``); err != nil {
+		return err
+	}
+
 	// displayAsGroupBox
-	if w.ui.displayAsGroupBox, err = walk.NewGroupBox(w.ui.displayTab); err != nil {
+	if w.ui.displayAsGroupBox, err = walk.NewGroupBox(w.ui.bkgDisplayGroupBox); err != nil {
 		return err
 	}
 	w.ui.displayAsGroupBox.SetName("displayAsGroupBox")
-	if err := w.ui.displayAsGroupBox.SetBounds(walk.Rectangle{0, 0, 131, 271}); err != nil {
+	if err := w.ui.displayAsGroupBox.SetBounds(walk.Rectangle{0, 0, 131, 251}); err != nil {
 		return err
 	}
 	if err := w.ui.displayAsGroupBox.SetTitle(`Display As`); err != nil {
@@ -322,6 +539,121 @@ func (w *Dialog) init(owner walk.Form) (err error) {
 		return err
 	}
 
+	// rowsSpinBox
+	if w.ui.rowsSpinBox, err = walk.NewNumberEdit(w.ui.bkgDisplayGroupBox); err != nil {
+		return err
+	}
+	w.ui.rowsSpinBox.SetName("rowsSpinBox")
+	if err := w.ui.rowsSpinBox.SetBounds(walk.Rectangle{250, 220, 44, 22}); err != nil {
+		return err
+	}
+
+	// colsSpinBox
+	if w.ui.colsSpinBox, err = walk.NewNumberEdit(w.ui.bkgDisplayGroupBox); err != nil {
+		return err
+	}
+	w.ui.colsSpinBox.SetName("colsSpinBox")
+	if err := w.ui.colsSpinBox.SetBounds(walk.Rectangle{300, 220, 44, 22}); err != nil {
+		return err
+	}
+
+	// checkBox_5
+	if w.ui.checkBox_5, err = walk.NewCheckBox(w.ui.bkgDisplayGroupBox); err != nil {
+		return err
+	}
+	w.ui.checkBox_5.SetName("checkBox_5")
+	w.ui.checkBox_5.SetEnabled(false)
+	if err := w.ui.checkBox_5.SetBounds(walk.Rectangle{140, 70, 84, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.checkBox_5.SetText(`Big Endian`); err != nil {
+		return err
+	}
+
+	// checkBox_7
+	if w.ui.checkBox_7, err = walk.NewCheckBox(w.ui.bkgDisplayGroupBox); err != nil {
+		return err
+	}
+	w.ui.checkBox_7.SetName("checkBox_7")
+	if err := w.ui.checkBox_7.SetBounds(walk.Rectangle{360, 220, 84, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.checkBox_7.SetText(`Scrollback`); err != nil {
+		return err
+	}
+
+	// checkBox_2
+	if w.ui.checkBox_2, err = walk.NewCheckBox(w.ui.bkgDisplayGroupBox); err != nil {
+		return err
+	}
+	w.ui.checkBox_2.SetName("checkBox_2")
+	if err := w.ui.checkBox_2.SetBounds(walk.Rectangle{140, 30, 96, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.checkBox_2.SetText(`newLine mode`); err != nil {
+		return err
+	}
+
+	// checkBox_4
+	if w.ui.checkBox_4, err = walk.NewCheckBox(w.ui.bkgDisplayGroupBox); err != nil {
+		return err
+	}
+	w.ui.checkBox_4.SetName("checkBox_4")
+	if err := w.ui.checkBox_4.SetBounds(walk.Rectangle{200, 50, 54, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.checkBox_4.SetText(`7Bits`); err != nil {
+		return err
+	}
+
+	// checkBox
+	if w.ui.checkBox, err = walk.NewCheckBox(w.ui.bkgDisplayGroupBox); err != nil {
+		return err
+	}
+	w.ui.checkBox.SetName("checkBox")
+	if err := w.ui.checkBox.SetBounds(walk.Rectangle{140, 10, 90, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.checkBox.SetText(`Half Duplex`); err != nil {
+		return err
+	}
+
+	// checkBox_3
+	if w.ui.checkBox_3, err = walk.NewCheckBox(w.ui.bkgDisplayGroupBox); err != nil {
+		return err
+	}
+	w.ui.checkBox_3.SetName("checkBox_3")
+	if err := w.ui.checkBox_3.SetBounds(walk.Rectangle{140, 50, 60, 17}); err != nil {
+		return err
+	}
+	if err := w.ui.checkBox_3.SetText(`Invert`); err != nil {
+		return err
+	}
+
+	// rowsLabel
+	if w.ui.rowsLabel, err = walk.NewLabel(w.ui.bkgDisplayGroupBox); err != nil {
+		return err
+	}
+	w.ui.rowsLabel.SetName("rowsLabel")
+	if err := w.ui.rowsLabel.SetBounds(walk.Rectangle{250, 200, 30, 12}); err != nil {
+		return err
+	}
+	if err := w.ui.rowsLabel.SetText(`Rows`); err != nil {
+		return err
+	}
+
+	// colsLabel
+	if w.ui.colsLabel, err = walk.NewLabel(w.ui.bkgDisplayGroupBox); err != nil {
+		return err
+	}
+	w.ui.colsLabel.SetName("colsLabel")
+	if err := w.ui.colsLabel.SetBounds(walk.Rectangle{310, 200, 30, 12}); err != nil {
+		return err
+	}
+	if err := w.ui.colsLabel.SetText(`Cols`); err != nil {
+		return err
+	}
+
 	// portTab
 	if w.ui.portTab, err = walk.NewTabPage(); err != nil {
 		return err
@@ -339,7 +671,7 @@ func (w *Dialog) init(owner walk.Form) (err error) {
 		return err
 	}
 	w.ui.portGroupBox.SetName("portGroupBox")
-	if err := w.ui.portGroupBox.SetBounds(walk.Rectangle{0, 0, 561, 221}); err != nil {
+	if err := w.ui.portGroupBox.SetBounds(walk.Rectangle{0, 0, 801, 251}); err != nil {
 		return err
 	}
 	if err := w.ui.portGroupBox.SetTitle(``); err != nil {
@@ -424,15 +756,15 @@ func (w *Dialog) init(owner walk.Form) (err error) {
 		return err
 	}
 
-	// parityNoneRadioButton_2
-	if w.ui.parityNoneRadioButton_2, err = walk.NewRadioButton(w.ui.parityGroupBox); err != nil {
+	// parityNoneRadioButton
+	if w.ui.parityNoneRadioButton, err = walk.NewRadioButton(w.ui.parityGroupBox); err != nil {
 		return err
 	}
-	w.ui.parityNoneRadioButton_2.SetName("parityNoneRadioButton_2")
-	if err := w.ui.parityNoneRadioButton_2.SetBounds(walk.Rectangle{11, 23, 47, 17}); err != nil {
+	w.ui.parityNoneRadioButton.SetName("parityNoneRadioButton")
+	if err := w.ui.parityNoneRadioButton.SetBounds(walk.Rectangle{11, 23, 47, 17}); err != nil {
 		return err
 	}
-	if err := w.ui.parityNoneRadioButton_2.SetText(`None`); err != nil {
+	if err := w.ui.parityNoneRadioButton.SetText(`None`); err != nil {
 		return err
 	}
 
@@ -733,135 +1065,6 @@ func (w *Dialog) init(owner walk.Form) (err error) {
 		return err
 	}
 	if err := w.ui.tabWidget.Pages().Add(w.ui.tab_10); err != nil {
-		return err
-	}
-
-	// widget
-	if w.ui.widget, err = walk.NewComposite(w); err != nil {
-		return err
-	}
-	w.ui.widget.SetName("widget")
-	if err := w.ui.widget.SetBounds(walk.Rectangle{0, 600, 800, 32}); err != nil {
-		return err
-	}
-
-	// statusGroupBox
-	if w.ui.statusGroupBox, err = walk.NewGroupBox(w); err != nil {
-		return err
-	}
-	w.ui.statusGroupBox.SetName("statusGroupBox")
-	if err := w.ui.statusGroupBox.SetBounds(walk.Rectangle{580, 320, 81, 271}); err != nil {
-		return err
-	}
-	if err := w.ui.statusGroupBox.SetTitle(`Status`); err != nil {
-		return err
-	}
-
-	// toolButton_2
-	if w.ui.toolButton_2, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
-		return err
-	}
-	w.ui.toolButton_2.SetName("toolButton_2")
-	if err := w.ui.toolButton_2.SetBounds(walk.Rectangle{11, 25, 59, 18}); err != nil {
-		return err
-	}
-	if err := w.ui.toolButton_2.SetText(`Connected`); err != nil {
-		return err
-	}
-
-	// toolButton_3
-	if w.ui.toolButton_3, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
-		return err
-	}
-	w.ui.toolButton_3.SetName("toolButton_3")
-	if err := w.ui.toolButton_3.SetBounds(walk.Rectangle{11, 51, 55, 18}); err != nil {
-		return err
-	}
-	if err := w.ui.toolButton_3.SetText(`RXD(2)`); err != nil {
-		return err
-	}
-
-	// toolButton_4
-	if w.ui.toolButton_4, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
-		return err
-	}
-	w.ui.toolButton_4.SetName("toolButton_4")
-	if err := w.ui.toolButton_4.SetBounds(walk.Rectangle{11, 77, 55, 18}); err != nil {
-		return err
-	}
-	if err := w.ui.toolButton_4.SetText(`TXD(3)`); err != nil {
-		return err
-	}
-
-	// toolButton_6
-	if w.ui.toolButton_6, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
-		return err
-	}
-	w.ui.toolButton_6.SetName("toolButton_6")
-	if err := w.ui.toolButton_6.SetBounds(walk.Rectangle{11, 103, 55, 18}); err != nil {
-		return err
-	}
-	if err := w.ui.toolButton_6.SetText(`CTS(8)`); err != nil {
-		return err
-	}
-
-	// toolButton_5
-	if w.ui.toolButton_5, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
-		return err
-	}
-	w.ui.toolButton_5.SetName("toolButton_5")
-	if err := w.ui.toolButton_5.SetBounds(walk.Rectangle{11, 129, 55, 18}); err != nil {
-		return err
-	}
-	if err := w.ui.toolButton_5.SetText(`DCD(1)`); err != nil {
-		return err
-	}
-
-	// toolButton_7
-	if w.ui.toolButton_7, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
-		return err
-	}
-	w.ui.toolButton_7.SetName("toolButton_7")
-	if err := w.ui.toolButton_7.SetBounds(walk.Rectangle{11, 155, 55, 18}); err != nil {
-		return err
-	}
-	if err := w.ui.toolButton_7.SetText(`DSR(6)`); err != nil {
-		return err
-	}
-
-	// toolButton_8
-	if w.ui.toolButton_8, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
-		return err
-	}
-	w.ui.toolButton_8.SetName("toolButton_8")
-	if err := w.ui.toolButton_8.SetBounds(walk.Rectangle{11, 181, 59, 18}); err != nil {
-		return err
-	}
-	if err := w.ui.toolButton_8.SetText(`Ring(9)`); err != nil {
-		return err
-	}
-
-	// toolButton_9
-	if w.ui.toolButton_9, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
-		return err
-	}
-	w.ui.toolButton_9.SetName("toolButton_9")
-	if err := w.ui.toolButton_9.SetBounds(walk.Rectangle{11, 207, 49, 18}); err != nil {
-		return err
-	}
-	if err := w.ui.toolButton_9.SetText(`BREAK`); err != nil {
-		return err
-	}
-
-	// toolButton_10
-	if w.ui.toolButton_10, err = walk.NewToolButton(w.ui.statusGroupBox); err != nil {
-		return err
-	}
-	w.ui.toolButton_10.SetName("toolButton_10")
-	if err := w.ui.toolButton_10.SetBounds(walk.Rectangle{11, 233, 49, 18}); err != nil {
-		return err
-	}
-	if err := w.ui.toolButton_10.SetText(`Error`); err != nil {
 		return err
 	}
 
